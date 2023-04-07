@@ -13,7 +13,7 @@ var roleRepairer = {
             var targets = creep.room.find(FIND_MY_STRUCTURES, {
                 filter: (s) => (s.structureType != STRUCTURE_WALL) && s.hits < s.hitsMax
             });
-            target = targets[0];
+            let target = targets[0];
             if(target){
                 var e = creep.repair(target);
                 if(e == ERR_NOT_IN_RANGE){
